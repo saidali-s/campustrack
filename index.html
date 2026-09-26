@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CampusTrack | College Bus Tracker</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      🚌 <span>CampusTrack</span>
+    </div>
+
+    <div class="nav-right">
+      <span class="status">
+        <span class="online-dot"></span>
+        Live Tracking
+      </span>
+
+      <button class="profile">👤 Student</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="welcome">
+        <p>Welcome back 👋</p>
+        <h2>Find your bus</h2>
+      </div>
+
+      <div class="search">
+        <input
+          type="text"
+          id="searchBus"
+          placeholder="Search bus..."
+        />
+      </div>
+
+      <div class="section-title">
+        Active Buses
+      </div>
+
+      <div id="busList"></div>
+
+    </aside>
+
+    <!-- MAP AREA -->
+    <section class="map-section">
+
+      <div id="map"></div>
+
+      <div class="map-overlay">
+
+        <div class="map-card">
+          <span class="small-label">SELECTED BUS</span>
+
+          <h2 id="selectedBus">
+            Bus 01
+          </h2>
+
+          <div class="eta">
+            <strong id="eta">4 min</strong>
+            <span>ETA</span>
+          </div>
+
+          <div class="route-info">
+            <span>📍 Next stop</span>
+            <strong id="nextStop">
+              Main Gate
+            </strong>
+          </div>
+
+          <div class="delay-row" id="delayRow">
+            <span class="small-label">STATUS</span>
+            <strong id="busDelayStatus">On time</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>CampusTrack © 2026</span>
+    <span>College Transportation System</span>
+  </footer>
+
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

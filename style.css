@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 70px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.status {
+  font-size: 14px;
+  color: #16a34a;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.online-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.profile {
+  border: none;
+  background: #eff6ff;
+
+  padding: 10px 15px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  height: calc(100vh - 110px);
+
+  display: grid;
+  grid-template-columns: 330px 1fr;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  background: white;
+
+  padding: 25px;
+
+  border-right: 1px solid #e5e7eb;
+
+  overflow-y: auto;
+}
+
+.welcome p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.welcome h2 {
+  margin-top: 5px;
+  font-size: 24px;
+}
+
+/* SEARCH */
+
+.search {
+  margin: 25px 0;
+}
+
+.search input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dbe1ea;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.search input:focus {
+  border-color: #2563eb;
+}
+
+/* SECTION */
+
+.section-title {
+  font-size: 13px;
+  color: #6b7280;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+}
+
+/* BUS CARD */
+
+.bus-card {
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  background: white;
+}
+
+.bus-card:hover {
+  border-color: #2563eb;
+
+  transform: translateY(-2px);
+}
+
+.bus-card.active {
+  background: #eff6ff;
+
+  border-color: #2563eb;
+}
+
+.bus-header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.bus-name {
+  font-weight: 700;
+}
+
+.bus-status {
+  font-size: 11px;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.bus-route {
+  color: #6b7280;
+
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+.bus-eta {
+  margin-top: 12px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 13px;
+}
+
+/* MAP */
+
+.map-section {
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* MAP CARD */
+
+.map-overlay {
+  position: absolute;
+
+  z-index: 1000;
+
+  top: 20px;
+  right: 20px;
+}
+
+.map-card {
+  background: white;
+
+  width: 230px;
+
+  padding: 20px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.small-label {
+  color: #6b7280;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.map-card h2 {
+  margin-top: 5px;
+}
+
+.eta {
+  margin-top: 15px;
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 7px;
+}
+
+.eta strong {
+  color: #2563eb;
+
+  font-size: 26px;
+}
+
+.eta span {
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.route-info {
+  margin-top: 15px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #eee;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 12px;
+}
+
+.delay-row {
+  margin-top: 15px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #eee;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-size: 12px;
+}
+
+.delay-row strong {
+  color: #16a34a;
+
+  font-weight: 700;
+}
+
+.delay-row.delayed strong {
+  color: #dc2626;
+}
+
+.status-pill {
+  margin-top: 10px;
+
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.status-pill.on-time {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.status-pill.delayed {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+/* FOOTER */
+
+footer {
+  height: 40px;
+
+  background: white;
+
+  border-top: 1px solid #e5e7eb;
+
+  padding: 0 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .dashboard {
+    grid-template-columns: 1fr;
+
+    height: auto;
+  }
+
+  .sidebar {
+    border-right: none;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .map-section {
+    height: 500px;
+  }
+
+  .nav-right .status {
+    display: none;
+  }
+
+}
